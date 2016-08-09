@@ -1,0 +1,7 @@
+include_rules
+
+#LIBS += -lgmock -lgtest -lpthread -lglut -lGLU -lGL
+LIBS += -framework OpenGL -framework GLUT -framework Cocoa
+
+: foreach *.cpp |> !cc |> {objs}
+: {objs} |> !exe |>
